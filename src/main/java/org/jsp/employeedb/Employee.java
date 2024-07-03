@@ -10,23 +10,19 @@ import jakarta.persistence.Id;
 public class Employee
 {
 	@Id
-	@GeneratedValue(strategy =GenerationType.IDENTITY)
+	
 	private String eid;
-	@Column(nullable = false)
+	
 	private String ename;
-	@Column(nullable = false)
+	
 	private double sal;
-	@Column(nullable = false)
+	
 	private int age;
-	@Column(nullable = false)
+
 	private String design;
 	
 	private String email;
 	
-	public Employee()
-	{
-		
-	}
 
 
 	public Employee(String eid, String ename, double sal, int age, String design, String email) {
@@ -39,25 +35,17 @@ public class Employee
 		this.email = email;
 	}
 
-
-
-
-
-
-
-
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public String getEid() {
 		return eid;
 	}
 
-
-
 	public void setEid(String eid) {
 		this.eid = eid;
 	}
-
-
 
 	public String getEname() {
 		return ename;
@@ -91,13 +79,25 @@ public class Employee
 		this.design = design;
 	}
 
+	public String getEmail() {
+		return email;
+	}
 
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	@Override
 	public String toString() {
 		return "Employee [eid=" + eid + ", ename=" + ename + ", sal=" + sal + ", age=" + age + ", design=" + design
-				+ "]";
+				+ ", email=" + email + "]";
 	}
+
+
+	
+
+
+	
 
 	
 	

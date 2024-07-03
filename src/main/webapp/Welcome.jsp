@@ -20,5 +20,15 @@
 	<form action="EmpByAge.jsp">
 	        <button type="submit">EMP BY Age</button>
 	    </form>
+		
+		<form action="FindByAgeBw.jsp">
+			        <button type="submit">EMP BY AgeB/W</button>
+			    </form>
+				
+				<form action="EmpByEmailOrEid.jsp">
+							        <button type="submit">EMP BY Email/Eid</button>
+							    </form>
+										
+				
 </body>
 </html>

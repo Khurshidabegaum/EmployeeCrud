@@ -20,6 +20,9 @@
     <input type=number name="age"><br><br>
     <label for="">design</label>
     <input type="text" name="design"><br><br>
+	<label for="">Email</label>
+		<input type="text" name="email"><br><br>
+	
     <button type="submit" style="color: brown;">Add EMP</button>
   </form><br><br>
   <h1>${msg}</h1> <br><br>

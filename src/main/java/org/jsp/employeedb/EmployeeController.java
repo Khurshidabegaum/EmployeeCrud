@@ -66,19 +66,38 @@ public class EmployeeController
 	}
 	
 	@RequestMapping("EmpByAge")
-	String findByAge(int age,HttpSession h1)
-	{
-		 List<Employee> l1=repo.findByAge(age);
-		 if(l1.size()==0)
-		 {
-			 h1.setAttribute("moon","Employees not Found");
-		 }
-		 else
-		 {
-			 h1.setAttribute("moon", l1);
-		 }
-	return "EmpByAge.jsp";
+	String empByAge(int age ,HttpSession h1) {
+		List<Employee> l1=repo.findByAge(age);
+		if(l1.size()==0) {
+			h1.setAttribute("info","Employees Not Found.....!!");
+		}
+		else {
+			h1.setAttribute("info", l1);
+		}
+		return "EmpByAge.jsp";
 	}
 	
-
+	@RequestMapping("EmpByAgeBW ")
+	String empByAgeBw(int age1,int age2 ,HttpSession h1) {
+		List<Employee> l1=repo.findBwAge(age1,age2);
+		if(l1.size()==0) {
+			h1.setAttribute("info","Employees Not Found.....!!");
+		}
+		else {
+			h1.setAttribute("info", l1);
+		}
+		return "FindByAgeBw.jsp";
+	}
+	
+	@RequestMapping("EmpByEmailOrEid")
+	String empByEmailOrEid(String value,HttpSession h1) {
+		Employee e=repo.findByEidOrEmail(value, value);
+		if(e!=null) {
+			h1.setAttribute("info", e);
+		}
+		else {
+			h1.setAttribute("info","Employees Not Found.....!!");
+		}
+		return "EmpByEmailOrEid.jsp";
+	}
 }

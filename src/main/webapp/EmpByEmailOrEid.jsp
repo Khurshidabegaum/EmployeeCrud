@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 style="color: crimson;">Search Employee By Age....!!!!</h1>
-    <form action="EmpByAge">
-        <legend>Employee Age</legend>
-        <input type=number name="age"><br>
+    <h1 style="color: orange;">Search Employee By Email or EID....!!!!</h1>
+    <form action="EmpByEmailOrEid">
+        <legend>Employee Email Or Eid</legend>
+        <input type="text" name="value"><br>
         <button type="submit">Find</button>
     </form>
     <br><br>
